@@ -1,7 +1,6 @@
 [build]
-  base = "my-react-app"
   command = "npm run build"
-  publish = "my-react-app/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
