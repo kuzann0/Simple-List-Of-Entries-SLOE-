@@ -139,6 +139,13 @@ function Array() {
     });
   }
 
+  function checkPropertyNumberDuplicate(propertyNumber, excludeIndex = null) {
+    return entries.some((entry, idx) => {
+      if (excludeIndex !== null && idx === excludeIndex) return false;
+      return entry.propertyNumber === propertyNumber;
+    });
+  }
+
   function handleAddEntry() {
     const entryNumberVal = document.getElementById("entryNumber").value;
     const modelNameVal = document.getElementById("modelName").value;
@@ -162,6 +169,12 @@ function Array() {
     // Check for duplicate entry number
     if (entries.some(e => e.entryNumber === entryNumberVal)) {
       setAddErrors({ entryNumber: `Entry number ${entryNumberVal} already exists!` });
+      return;
+    }
+
+    // Check for duplicate property number
+    if (checkPropertyNumberDuplicate(propertyNumberVal)) {
+      setAddErrors({ propertyNumber: `Property Number "${propertyNumberVal}" already exists!` });
       return;
     }
 
@@ -286,6 +299,12 @@ function Array() {
     );
     if (isDuplicate) {
       setEditErrors({ entryNumber: `Entry number ${editData.entryNumber} already exists!` });
+      return;
+    }
+
+    // Check for duplicate property number (excluding current entry)
+    if (checkPropertyNumberDuplicate(editData.propertyNumber, editingIndex)) {
+      setEditErrors({ propertyNumber: `Property Number "${editData.propertyNumber}" already exists!` });
       return;
     }
 
