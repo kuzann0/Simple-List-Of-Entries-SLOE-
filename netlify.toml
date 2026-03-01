@@ -1,0 +1,12 @@
+[build]
+  base = "my-react-app"
+  command = "npm run build"
+  publish = "my-react-app/dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
