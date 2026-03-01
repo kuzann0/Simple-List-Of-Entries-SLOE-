@@ -1,0 +1,33 @@
+{
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.wordBasedSuggestions": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingComments": "never",
+  "editor.autoSurround": "never",
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "[javascript]": {
+    "editor.defaultFormatter": null
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": null,
+    "editor.autoClosingBrackets": "always"
+  },
+  "javascript.autoClosingTags": false,
+  "javascript.suggest.enabled": false,
+  "typescript.suggest.enabled": false,
+  "eslint.enable": false,
+  "emmet.showExpandedAbbreviation": "onConfirm",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.enableAbbreviationModifiers": false
+}
